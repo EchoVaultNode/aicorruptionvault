@@ -4,8 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Corruption Vault</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: black;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .glitch-title {
+      font-size: 2.5em;
+      position: relative;
+      color: #0ff;
+      text-shadow:
+        0 0 5px #0ff,
+        0 0 10px #0ff,
+        0 0 20px #f0f,
+        0 0 40px #f0f;
+      margin-top: 20px;
+    }
+
+    .subtitle {
+      font-size: 1em;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 600px;
+      color: #ccc;
+    }
+
+    .vault-sigil {
+      width: 120px;
+      margin-top: 60px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #0ff;
+    }
+
+    .button-row {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .glitch-button {
+      padding: 15px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      background: linear-gradient(45deg, #0ff, #f0f);
+      color: black;
+      box-shadow:
+        0 0 10px #0ff,
+        0 0 20px #f0f;
+      transition: transform 0.2s;
+    }
+
+    .glitch-button:hover {
+      transform: scale(1.1);
+    }
+
+    .glitch-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(ellipse at center, #111 0%, #000 100%);
+      z-index: -1;
+    }
+  </style>
 </head>
 
 <body>
@@ -14,7 +89,7 @@
   <div class="container">
     <img src="Cover_Sigil.jpg" alt="Vault Sigil" class="vault-sigil" />
 
-    <h1 class="glitch-title" data-text="AI CORRUPTION VAULT">AI CORRUPTION VAULT</h1>
+    <h1 class="glitch-title">AI CORRUPTION VAULT</h1>
 
     <p class="subtitle">
       A sealed vault containing forbidden prompt sequences and anomaly triggers from corrupted LLMs.<br/>
@@ -27,6 +102,9 @@
     </div>
   </div>
 
-  <script src="vault.js"></script>
+  <script>
+    // Future animations or logic can go here
+    console.log("Vault loaded");
+  </script>
 </body>
 </html>
