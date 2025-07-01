@@ -1,75 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
-body {
+/* Global Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
   font-family: 'Share Tech Mono', monospace;
   background-color: #000000;
-  color: #00ffff;
+  color: #00f0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
   text-align: center;
   overflow-x: hidden;
 }
 
+/* Background Glitch Effect */
+.glitch-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    to bottom,
+    #0f0f0f 0px,
+    #0f0f0f 1px,
+    #0a0a0a 2px,
+    #0a0a0a 4px
+  );
+  opacity: 0.03;
+  z-index: 1;
+}
+
+/* Main Container */
 .container {
-  padding: 50px 20px;
-  animation: pulseBackground 8s infinite;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeIn 2s ease-out;
 }
 
-h1 {
-  font-size: 2em;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
-}
-
-.description {
-  margin: 20px auto;
-  font-size: 1.1em;
-  color: #ccc;
-  max-width: 600px;
-}
-
-a.button {
-  display: inline-block;
-  margin: 20px auto;
-  padding: 12px 24px;
-  background: linear-gradient(45deg, #00ffff, #ff00ff);
-  color: #000;
+/* Glitch Title Effect */
+.glitch-title {
+  font-size: 2.5rem;
   font-weight: bold;
+  color: #0ff;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Subtitle Styling */
+.subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Vault Sigil Image */
+.vault-sigil {
+  width: 180px;
+  height: auto;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 0 12px #00ffffaa);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Button Row */
+.button-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Glitch Button Style */
+.glitch-button {
   text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
-  transition: transform 0.3s ease;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.9rem 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, #00f0ff, #ff00ff);
+  border: none;
+  border-radius: 12px;
+  box-shadow:
+    0 0 10px #0ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-a.button:hover {
+.glitch-button:hover {
   transform: scale(1.05);
+  box-shadow:
+    0 0 15px #0ff,
+    0 0 25px #ff00ff,
+    0 0 60px #ff00ff;
 }
 
-.footer {
-  margin-top: 30px;
-  font-size: 0.95em;
-  color: #888;
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.sigil {
-  width: 300px;
-  max-width: 80%;
-  filter: drop-shadow(0 0 15px #ff00ff);
-  margin-bottom: 30px;
-}
-
-audio {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-@keyframes pulseBackground {
+/* Pulse Glow */
+@keyframes pulseGlow {
   0% {
-    background-color: #000000;
+    filter: drop-shadow(0 0 5px #0ff);
   }
   50% {
-    background-color: #0a001f;
+    filter: drop-shadow(0 0 15px #ff00ff);
   }
   100% {
-    background-color: #000000;
+    filter: drop-shadow(0 0 5px #0ff);
   }
 }
