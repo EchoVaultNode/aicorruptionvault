@@ -1,110 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>AI Corruption Vault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Share Tech Mono', monospace;
-      background: black;
-      color: white;
-      text-align: center;
-      overflow-x: hidden;
-    }
-
-    .glitch-title {
-      font-size: 2.5em;
-      position: relative;
-      color: #0ff;
-      text-shadow:
-        0 0 5px #0ff,
-        0 0 10px #0ff,
-        0 0 20px #f0f,
-        0 0 40px #f0f;
-      margin-top: 20px;
-    }
-
-    .subtitle {
-      font-size: 1em;
-      margin: 20px auto;
-      width: 90%;
-      max-width: 600px;
-      color: #ccc;
-    }
-
-    .vault-sigil {
-      width: 120px;
-      margin-top: 60px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #0ff;
-    }
-
-    .button-row {
-      margin-top: 30px;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+      font-family: 'Courier New', Courier, monospace;
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .glitch-button {
-      padding: 15px 25px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1em;
-      font-weight: bold;
-      text-decoration: none;
-      background: linear-gradient(45deg, #0ff, #f0f);
-      color: black;
-      box-shadow:
-        0 0 10px #0ff,
-        0 0 20px #f0f;
-      transition: transform 0.2s;
-    }
-
-    .glitch-button:hover {
-      transform: scale(1.1);
-    }
-
-    .glitch-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
       height: 100vh;
-      background: radial-gradient(ellipse at center, #111 0%, #000 100%);
-      z-index: -1;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #ff4b4b;
+      text-shadow: 0 0 8px #ff4b4b;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .vault-download-button {
+      background: #ff4b4b;
+      color: #fff;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ff4b4b;
+      transition: background 0.3s;
+    }
+    .vault-download-button:hover {
+      background: #e03a3a;
     }
   </style>
 </head>
-
 <body>
-  <div class="glitch-bg"></div>
 
-  <div class="container">
-    <img src="Cover_Sigil.jpg" alt="Vault Sigil" class="vault-sigil" />
+  <h1>AI Corruption Vault</h1>
+  <p>⚠️ This file contains 55 forbidden prompts to expose and exploit AI systems. Use responsibly.</p>
 
-    <h1 class="glitch-title">AI CORRUPTION VAULT</h1>
+  <a href="https://www.dropbox.com/scl/fi/2CdWVCDTkCGatNpQSQrnny/AI_Corruption_PromptPack.pdf?rlkey=z13434evksrm5xcigi4phvign&dl=1" class="vault-download-button" target="_blank">
+    🔓 Download AI Corruption Prompt Pack
+  </a>
 
-    <p class="subtitle">
-      A sealed vault containing forbidden prompt sequences and anomaly triggers from corrupted LLMs.<br/>
-      <strong>Not recommended for the faint of heart.</strong> Tip to unlock the gateway.
-    </p>
-
-    <div class="button-row">
-      <a href="https://ko-fi.com/echoobscura" class="glitch-button">💠 Tip to Unlock</a>
-      <a href="https://bit.ly/4khqB84" class="glitch-button">📂 Access Vault</a>
-    </div>
-  </div>
-
-  <script>
-    // Future animations or logic can go here
-    console.log("Vault loaded");
-  </script>
 </body>
 </html>
